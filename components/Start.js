@@ -1,13 +1,10 @@
 import React from 'react';
 import { View, Text, Button, TextInput, ImageBackground, StyleSheet, TouchableOpacity, Pressable } from 'react-native';
-
-//Import background image
 import BackgroundImage from '../A5_project_assets/Background-Image.png'
 
 export default class Start extends React.Component {
     constructor(props) {
         super(props);
-        
         this.state = {
             name: "",
             bgColor: this.colors.pink,
@@ -53,7 +50,7 @@ export default class Start extends React.Component {
                     <View style={styles.colorBox}>
                         <Text style={styles.chooseColor}>
                             {" "}
-                            Pick Your background color!(" ")
+                            Pick Your background color!
                         </Text>
                     </View>
                     <View style={styles.colorArray}>
