@@ -3,6 +3,8 @@ import { View, KeyboardAvoidingView, Platform,StyleSheet } from 'react-native';
 import { GiftedChat, Bubble, InputToolbar } from 'react-native-gifted-chat';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import NetInfo from '@react-native-community/netinfo';
+import CustomActions from './CustomActions';
+import MapView from 'react-native-maps';
 
 
 //Firestore Database
@@ -173,6 +175,33 @@ class Chat extends Component {
         />
       );
     }
+    
+  }
+
+    renderCustomActions = (props) => {
+      return <CustomActions {...props} />
+    };
+  
+
+  
+
+  //render user's location
+  renderCustomView(props) {
+    const { currentMessage } = props;
+    if (currentMessage.location) {
+      return (
+        <MapView
+        style={{ width: 150, height: 100, borderRadius: 13, margin: 3 }}
+        region= {{
+          latitude: currentMessage.location.latitude,
+          longitude: currentMessage.location.longitude, 
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+        />
+      );
+    }
+    return null;
   }
 
   // Customize message bubbles
@@ -192,6 +221,8 @@ class Chat extends Component {
     )
   }
 
+  
+
   render() {
     let { bgColor, name } = this.props.route.params;
     return (
@@ -200,6 +231,8 @@ class Chat extends Component {
       renderBubble={this.renderBubble.bind(this)}
       messages={this.state.messages}
       renderInputToolbar={this.renderInputToolbar.bind(this)}
+      renderCustomView={this.renderCustomView}
+      renderActions={this.renderCustomActions}
       onSend={(messages) => this.onSend(messages)}
       bottomOffset={34}
       user={{
