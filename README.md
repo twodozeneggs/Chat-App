@@ -20,7 +20,7 @@ reader so that I can engage with a chat interface.
 ### Key Features
 - A Start page where users can enter their name and choose a background color for the chat screen
 
-<img src="assets/images_readme/start.jpg" height="auto" width="200" alt="movie-view2">
+<img src="assets/images_chat_purple/start.jpg" height="auto" width="200" alt="movie-view2">
 - A page displaying the conversation, as well as an input field and submit button.
 
 <img src="assets/images_readme/chat_purple.jpg" height="auto" width="200" alt="movie-view2">    <img src="assets/images_readme/chat_1.jpg" height="auto" width="200" alt="movie-view2">
