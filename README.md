@@ -17,22 +17,6 @@ the latest news.
 time.
 - As a user with a visual impairment, I want to use a chat app that is compatible with a screen
 reader so that I can engage with a chat interface.
-### Key Features
-- A Start page where users can enter their name and choose a background color for the chat screen
-
-<img src="assets/images_chat_purple/start.jpg" height="auto" width="200" alt="movie-view2">
-- A page displaying the conversation, as well as an input field and submit button.
-
-<img src="assets/images_readme/chat_purple.jpg" height="auto" width="200" alt="movie-view2">    <img src="assets/images_readme/chat_1.jpg" height="auto" width="200" alt="movie-view2">
- 
-- Permission to send images and location data
-
-<img src="assets/images_readme/permissions1.jpg" height="auto" width="200" alt="movie-view2"> <img src="assets/images_readme/permissions2.jpg" height="auto" width="200" alt="movie-view2"> <img src="assets/images_readme/permissions3.jpg" height="auto" width="200" alt="movie-view2">
-
-- Offline storage (note the Airplane icon)
-<img src="assets/images_readme/chat_send_location.jpg" height="auto" width="200" alt="movie-view2">
-
-- Anoynymous user authentication (via Google Firebase authentication)
 
 ## Prerequisities
 - Node and latest version of npm
